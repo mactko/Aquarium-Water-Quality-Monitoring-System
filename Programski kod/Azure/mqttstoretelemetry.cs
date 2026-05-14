@@ -14,10 +14,10 @@ namespace mqttamsqueue
     public class readtelemetrydata
     {
         private readonly ILogger<readtelemetrydata> _logger;
-        private readonly string account_name = "mqtttelemetrydata";
-        private readonly string storageUri = "https://mqtttelemetrydata.table.core.windows.net";
-        private readonly string storageAccountKey = "VgcVM1W2Z5X9H/E/CFtqAUHzLeiFCGb5mul2SsIPMhyDlAMYyMs6bUlRXYRX9u97d1I96UVUdEzk+AStVaO0kA==";
-        private readonly string table_name = "mqtttelemetrytable";
+        private readonly string account_name = "xxx";
+        private readonly string storageUri = "xxx";
+        private readonly string storageAccountKey = "xxx";
+        private readonly string table_name = "xxx";
         private static int rowKey = 1;
 
         public readtelemetrydata(ILogger<readtelemetrydata> logger)
