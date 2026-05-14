@@ -29,13 +29,13 @@ An embedded system for continuous, automated monitoring and maintenance of aquar
 
 ## 🖥️ System Overview
 
-<img src="Pictures/system_diagram.png" alt="System Block Diagram" width="50%">
+<img src="Pictures/system_diagram.png" alt="System Block Diagram" width="75%">
 
 ---
 
 ## ☁️ Cloud Architecture
 
-<img src="Pictures/azure_architecture.png" alt="Azure Cloud Architecture" width="50%">
+<img src="Pictures/azure_architecture.png" alt="Azure Cloud Architecture" width="75%">
 
 ```
 ESP32 → MQTT/TLS → Azure Event Grid → Service Bus Queue → Function App → Table Storage
@@ -80,7 +80,7 @@ idf.py -p <PORT> flash monitor
 
 ## 🧪 Test Results
 
-<img src="Pictures/Pokazni_model.jpg" alt="Test Setup" width="50%">
+<img src="Pictures/Pokazni_model.jpg" alt="Test Setup" width="75%">
 
 Tested continuously for **12 hours** on a small acrylic aquarium:
 
