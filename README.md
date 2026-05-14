@@ -29,13 +29,13 @@ An embedded system for continuous, automated monitoring and maintenance of aquar
 
 ## 🖥️ System Overview
 
-![System Block Diagram](Pictures/system_diagram.png)
+<img src="Pictures/system_diagram.png" alt="System Block Diagram" width="50%">
 
 ---
 
 ## ☁️ Cloud Architecture
 
-![Azure Cloud Architecture](Pictures/azure_architecture.png)
+<img src="Pictures/azure_architecture.png" alt="Azure Cloud Architecture" width="50%">
 
 ```
 ESP32 → MQTT/TLS → Azure Event Grid → Service Bus Queue → Function App → Table Storage
@@ -52,11 +52,11 @@ Telemetry is published every 60 seconds in the format:
 
 1. **Install** [ESP-IDF v5.x](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/)
 2. **Provision Azure** — Event Grid Namespace, Service Bus, Function App, Table Storage
-3. **Generate TLS certs** with OpenSSL and place them in `ESP/main/certificates/` and `ESP/main/keys/`
+3. **Generate TLS certs** with OpenSSL and place them in `Code/ESP/main/certificates/` and `Code/ESP/main/keys/`
 4. **Configure** Wi-Fi credentials and MQTT broker via `idf.py menuconfig`
 5. **Build & flash:**
 ```bash
-cd "Programski kod/ESP"
+cd "Code/ESP"
 idf.py build
 idf.py -p <PORT> flash monitor
 ```
@@ -66,20 +66,21 @@ idf.py -p <PORT> flash monitor
 ## 📁 Project Structure
 
 ```
-├── Programski kod/
+├── Code/
 │   ├── ESP/               # ESP32 firmware (ESP-IDF)
 │   │   ├── components/    # Drivers: Wi-Fi, DS18B20, pump, turbidity
 │   │   └── main/          # App entry point + TLS certs/keys
 │   └── Azure/             # Function App — Service Bus consumer → Table Storage
-├── 3D modeli/             # 3D-printed enclosure
-└── Slike/ & Text/         # Images and thesis documentation
+├── 3d models/             # 3D-printed enclosure
+├── Pictures/              # Images and diagrams
+└── README.md
 ```
 
 ---
 
 ## 🧪 Test Results
 
-![Test Setup](Pictures/Pokazni_model.jpg)
+<img src="Pictures/Pokazni_model.jpg" alt="Test Setup" width="50%">
 
 Tested continuously for **12 hours** on a small acrylic aquarium:
 
